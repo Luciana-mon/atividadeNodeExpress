@@ -17,11 +17,12 @@ const alunos = [
 ]
 
 function filtrarNome(nome) {
-    return alunos.filter(aluno => aluno.nome === nome);
+    return alunos.filter(aluno => aluno.nome.toLowerCase() === nome.toLowerCase());
 }
 
 function filtrarMedia(media){
     return alunos.filter(aluno => aluno.media >= media);
+
 }
 
 module.exports = { alunos, filtrarNome, filtrarMedia };
