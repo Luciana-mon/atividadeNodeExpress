@@ -43,14 +43,12 @@ app.post('/alunos/atualizar/:index', (req, res) => {
 
     if(index < 0 || index >= dadosAlunos.alunos.length){
         res.status(404).json({message: "Aluno não existe!"});
-    } else if( nome === undefined && media === undefined){
+    } else if(nome == undefined || media == undefined){
         res.status(400).json({message:"Dados invalidos, insira todos os dados!"});
     } else {
         res.status(200).json({message: "Aluno atualizado!"});
     }
 });
-
-
 
 app.listen(3000, () =>{
     console.log("Servidor rodando em http://localhost:3000/")

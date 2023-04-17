@@ -22,7 +22,6 @@ function filtrarNome(nome) {
 
 function filtrarMedia(media){
     return alunos.filter(aluno => aluno.media >= media);
-
 }
 
-module.exports = { alunos, filtrarNome, filtrarMedia };
+module.exports = { alunos, filtrarNome, filtrarMedia};
